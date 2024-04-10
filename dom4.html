@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom4</title>
+</head>
+<body>
+    <p id="para">Where is the spninnner? 
+        <img src="spinner.gif" id="spinner" height="25" style="vertical-align: middle; display: none;" alt="">
+    </p>
+
+    <button id="tog">Spinner</button>
+    <button id="red">Red</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            document.querySelector('#tog').onclick= function(){
+                if (document.querySelector('#spinner').style.display==='none'){
+                    document.querySelector('#spinner').style.display ='inline';
+                }else{
+                    document.querySelector('#spinner').style.display = 'none';
+                }
+                
+            }
+            document.querySelector('#red').onclick=function(){
+                if(document.querySelector('#para').style.color === 'red'){
+                    document.querySelector('#para').style.color = '';
+                }else{
+                    document.querySelector('#para').style.color = 'red';
+                }
+            }
+        });
+       
+    </script>
+
+</body>
+</html>

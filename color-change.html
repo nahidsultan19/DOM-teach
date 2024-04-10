@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color</title>
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+
+                // first way 
+
+                // document.querySelector('#red').onclick=function(){
+                //     document.querySelector('#name').style.color='red';
+                // }
+                // document.querySelector('#green').onclick = function () {
+                //     document.querySelector('#name').style.color = 'green';
+                // }
+                // document.querySelector('#blue').onclick=function(){
+                //     document.querySelector('#name').style.color='blue';
+                // }
+
+                // Second way 
+
+                document.querySelectorAll('button').forEach((button)=>{
+                    button.onclick = function(){
+                        document.querySelector('#name').style.color=button.dataset.color;
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="name">Nahid Sultan</h1>
+        <button data-color="red">Red</button>
+        <button data-color="green">Green</button>
+        <button data-color="blue">Blue</button>
+    </body>
+</html>

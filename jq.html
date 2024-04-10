@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#tog').on('click', function () {
+                $('#spinner').toggle();
+            });
+            $('#red').on('click', function () {
+                $('#para').css('background-color', 'red');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <p id="para">Where is the spinner?
+        <img src="spinner.gif" id="spinner" height="25" style="vertical-align: middle; display: none;">
+    </p>
+    <p>
+        <a href="" id="tog">Toggle</a>
+        <a href="" id="red">Red</a>
+    </p>
+
+</body>
+
+</html>
